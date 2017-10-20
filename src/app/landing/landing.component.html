@@ -1,0 +1,45 @@
+<h1>Two way binding</h1>
+
+<input [(ngModel)]="username">
+
+<h2>Hello {{username}}!</h2>
+
+<p>-----------------------------------------------------------</p>
+
+<h1>{{title}}</h1>
+
+<ul>
+  <li *ngFor="let fruit of fruits">
+
+    {{fruit}}
+
+  </li>
+</ul>
+
+<p>------------------------------------------------------------</p>
+<h1>Directives</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [myHighlight]="color">Highlight me!</p>
+
+<p [myHighlight]="color" defaultColor="violet">
+  Highlight me too!
+</p>
+
+<p>---------------------------------------------------------------</p>
+
+<h1>Filters(Pipe) - Transform words to capitalize</h1>
+
+<input [(ngModel)]="cname">
+
+<h2>Hello {{cname | capitalize}}!</h2>
+
+<p>---------------------------------------------------------------</p>
+<h1>Animation</h1>
+
+<basic-anim></basic-anim>
